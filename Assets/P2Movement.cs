@@ -20,11 +20,11 @@ public class P2Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             lLeg.AddForce(moveLeft * movePower, ForceMode2D.Impulse);
-            rLeg.AddForce(moveRight * movePower, ForceMode2D.Impulse);
+            rLeg.AddForce(moveRight * movePower * 0.5f, ForceMode2D.Impulse);
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            rLeg.AddForce(moveLeft * movePower, ForceMode2D.Impulse);
+            rLeg.AddForce(moveLeft * movePower * 0.5f, ForceMode2D.Impulse);
             lLeg.AddForce(moveRight * movePower, ForceMode2D.Impulse);
         }
         if (Input.GetKeyDown(KeyCode.P))
